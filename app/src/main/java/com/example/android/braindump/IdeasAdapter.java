@@ -2,6 +2,7 @@ package com.example.android.braindump;
 
 import android.app.Activity;
 import android.content.Context;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,7 +20,8 @@ IdeasAdapter extends BaseAdapter {
     LayoutInflater inflater;
     TextView tv_ideas;
     EditText thoutgts;
-
+    TextView thoughtsView;
+    private RecyclerView mRecyclerView;
 
     public IdeasAdapter(Activity activity, List<Ideas> listId, TextView ideas_tv) {
         this.activity = activity;
@@ -65,6 +67,12 @@ IdeasAdapter extends BaseAdapter {
 
                 }
             });
+/*
+            thoughtsView = mRecyclerView.findViewHolderForAdapterPosition(position).itemView.findViewById(R.id.tv_ideas);
+            String textView = thoughtsView.getText().toString();
+            EditText editText = (EditText)convertView.findViewById(R.id.thoughts_input);
+            editText.setText(textView, TextView.BufferType.EDITABLE);*/
+
 
         }return convertView;
     }

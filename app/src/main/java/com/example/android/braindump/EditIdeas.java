@@ -14,8 +14,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class InputIdeas extends AppCompatActivity {
-
+public class EditIdeas extends AppCompatActivity {
     Button save;
     TextView thoughtsView;
     Editable textView;
@@ -46,9 +45,9 @@ public class InputIdeas extends AppCompatActivity {
                 thoutgts = (EditText)findViewById(R.id.thoughts_input);
                 if(thoutgts != null) {
                     Ideas person = new Ideas(thoutgts.getText().toString());
-                    db.addIdeas(person);
+                    db.updateIdeas(person);
                 }
-                startActivity(new Intent(InputIdeas.this, MainActivity.class));
+                startActivity(new Intent(EditIdeas.this, MainActivity.class));
                 finish();
 
             }
@@ -57,11 +56,11 @@ public class InputIdeas extends AppCompatActivity {
 
        /* textView = (EditText)findViewById(R.id.thoughts_input);
         textView = thoutgts.getText();*/
-      /*  thoutgts = (EditText)findViewById(R.id.thoughts_input);
+        thoutgts = (EditText)findViewById(R.id.thoughts_input);
         Bundle b = getIntent().getExtras();
         String textView = b.getString("new ideas");
         thoutgts.setText(textView);
-*/
+
    /*     thoughtsView = mRecyclerView.findViewHolderForAdapterPosition(position).itemView.findViewById(R.id.tv_ideas);
         String textView = thoughtsView.getText().toString();
         EditText editText = (EditText)findViewById(R.id.thoughts_input);
@@ -69,5 +68,4 @@ public class InputIdeas extends AppCompatActivity {
 
 */
     }
-
 }

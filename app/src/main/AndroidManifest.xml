@@ -20,6 +20,11 @@
         <activity android:name=".InputIdeas"
             android:label="thoughts"
             android:parentActivityName=".MainActivity"/>
+
+
+        <activity android:name=".EditIdeas"
+            android:label="thoughts"
+            android:parentActivityName=".MainActivity"/>
     </application>
 
 </manifest>
